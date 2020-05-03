@@ -37,10 +37,10 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader'
             },
-            {
-                test: /\.hero$/,
-                use: path.resolve(__dirname, '../loaders/hero.js'),
-            },
+            // {
+            //     test: /\.hero$/,
+            //     use: path.resolve(__dirname, '../loaders/hero.js'),
+            // },
         ]
     },
     plugins: [
