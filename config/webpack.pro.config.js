@@ -7,6 +7,8 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 const glob = require('glob-all');
 // Css tree shanking 摇树
 const purifyCssWebpack = require('purifycss-webpack');
+const myPlugin = require('../plugin/plugin');
+const myPlugin2 = require('../plugin/plugin2');
 const merge = require('webpack-merge');
 const webpackBase = require('./webpack.base.config');
 
@@ -27,6 +29,8 @@ module.exports = merge(webpackBase, {
                 path.resolve(__dirname, './src/*js')
             ])
         }),
+        new myPlugin(),
+        new myPlugin2()
     ],
     optimization: {
         // js 开启 tree shanking

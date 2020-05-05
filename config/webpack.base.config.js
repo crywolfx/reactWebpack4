@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: ['react-hot-loader/patch', path.resolve(__dirname, '../src/index.js')],
+    entry: [path.resolve(__dirname, '../src/index.js')],
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: 'main.[hash:8].js'
@@ -37,10 +37,12 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader'
             },
-            // {
-            //     test: /\.hero$/,
-            //     use: path.resolve(__dirname, '../loaders/hero.js'),
-            // },
+            {
+                test: /\.hero$/,
+                use: [{
+                    loader: 'hero-loader',
+                }]
+            },
         ]
     },
     plugins: [

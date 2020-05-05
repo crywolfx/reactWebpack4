@@ -1,4 +1,4 @@
 import React from "react";
 export default function Count() {
-    return <div>count plkjlkjlagdlllddljdaljslke</div>
+    return <div>count  llllpppl</div>
 }

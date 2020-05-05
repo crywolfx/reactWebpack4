@@ -10,6 +10,7 @@ const webpackBase = require('./webpack.base.config');
 
 // merge 用法和 Object.assign 类似
 module.exports = merge(webpackBase, {
+    entry: ['react-hot-loader/patch'],
     mode: 'development',
     plugins: [
         // 启用模块热替换(HMR - Hot Module Replacement)
@@ -28,6 +29,5 @@ module.exports = merge(webpackBase, {
         open: true,
         port: 8081,
         hot: true,
-        hotOnly: true
     },
 })
