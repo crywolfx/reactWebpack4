@@ -37,12 +37,6 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader'
             },
-            {
-                test: /\.hero$/,
-                use: [{
-                    loader: 'hero-loader',
-                }]
-            },
         ]
     },
     plugins: [
@@ -65,7 +59,8 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name]_[contenthash:6].css',
-        })
+        }),
+        // new DashboardPlugin(dashboard.setData),
     ],
     resolve: {
         // 规定在那里寻找第三方模块

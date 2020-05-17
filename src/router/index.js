@@ -8,6 +8,7 @@ const PrimaryLayout = () => (
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/count">Count</Link></li>
                 <li><Link to="/loader">Loader</Link></li>
+                <li><Link to="/Snap">Snap</Link></li>
             </ul>
         </header>
         <main>

@@ -28,6 +28,8 @@ module.exports = merge(webpackBase, {
         contentBase: '../dist',
         open: true,
         port: 8081,
+        // quiet: true,
+        historyApiFallback: true,
         hot: true,
     },
 })

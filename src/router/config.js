@@ -1,6 +1,7 @@
 import Home from "../pages/Home/index.jsx";
 import Count from "../pages/Count/index.jsx";
 import Loader from "../pages/Loader/index.jsx";
+import Snap from "../pages/Snap/index.jsx";
 
 const routerConfig = [
     {
@@ -19,6 +20,12 @@ const routerConfig = [
         path: '/loader',
         key: '/loader',
         component: Loader,
+        exact: true
+    },
+    {
+        path: '/snap',
+        key: '/snap',
+        component: Snap,
         exact: true
     }
 ]

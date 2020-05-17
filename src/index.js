@@ -2,8 +2,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'react-redux'
 import Router from "./router";
+import store from './store';
 
 /*初始化*/
 renderWithHotReload(Router);
@@ -20,9 +22,11 @@ if (module.hot) {
 function renderWithHotReload(Router) {
     ReactDOM.render(
         <AppContainer>
-            <BrowserRouter>
-                <Router />
-            </BrowserRouter>
+            {/* <Provider store={store}> */}
+                <BrowserRouter>
+                    <Router />
+                </BrowserRouter>
+            {/* </Provider> */}
         </AppContainer>,
         document.getElementById("root")
     )
